@@ -14,19 +14,63 @@ public class LoginPanel extends JPanel {
     public LoginPanel(CardLayout layout, JFrame frame, JPanel panelContainer) {
         this.layout = layout;
         this.panelContainer = panelContainer;
-        setLayout(new GridLayout(6, 1, 10, 10));
+        setLayout(new GridBagLayout());
+        setBackground(Color.decode("#F0F8FF")); 
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.insets = new Insets(10, 10, 10, 10); 
 
+        // Title prompt
         JLabel prompt = new JLabel("Enter Secret Code", SwingConstants.CENTER);
-        inputField = new JTextField();
-        JButton submit = new JButton("Enter");
-        messageLabel = new JLabel("", SwingConstants.CENTER);
-        attemptLabel = new JLabel("", SwingConstants.CENTER);
-        
-        // Create hint label that's always visible
-        hintLabel = new JLabel("Note : It rhymes with LUSH!!!", SwingConstants.CENTER);
-        hintLabel.setForeground(Color.GRAY);
+        prompt.setFont(new Font("Sans Serif", Font.BOLD, 24));
+        prompt.setForeground(Color.decode("#FF6F61")); // Coral color
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.gridwidth = 2; // Span across two columns
+        add(prompt, gbc);
 
-        // Submit action
+        // Input field
+        inputField = new JTextField();
+        inputField.setFont(new Font("Sans Serif", Font.PLAIN, 18));
+        inputField.setBorder(BorderFactory.createLineBorder(Color.decode("#FF6F61"), 2)); 
+        gbc.gridwidth = 1; 
+        gbc.gridx = 0;
+        gbc.gridy = 1;
+        gbc.weightx = 1.0; 
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        add(inputField, gbc);
+
+        // Submit button
+        JButton submit = new JButton("Enter");
+        submit.setFont(new Font("Sans Serif", Font.BOLD, 20)); 
+        submit.setBackground(Color.decode("#FF6F61")); 
+        submit.setForeground(Color.BLACK); 
+        submit.setFocusPainted(false);
+        submit.setOpaque(true);
+        submit.setBorder(BorderFactory.createLineBorder(Color.decode("#FF4F3D"), 2)); 
+        submit.setBorderPainted(true);
+        submit.setPreferredSize(new Dimension(100, 40)); 
+        gbc.gridx = 1; 
+        add(submit, gbc);
+
+        // Message and attempt labels
+        messageLabel = new JLabel("", SwingConstants.CENTER);
+        gbc.gridx = 0;
+        gbc.gridy = 3;
+        gbc.gridwidth = 2; 
+        add(messageLabel, gbc);
+
+        attemptLabel = new JLabel("", SwingConstants.CENTER);
+        add(attemptLabel, gbc);
+
+        // Hint label
+        hintLabel = new JLabel("Note: It rhymes with LUSH!!!", SwingConstants.CENTER);
+        hintLabel.setForeground(Color.GRAY);
+        hintLabel.setFont(new Font("Sans Serif", Font.ITALIC, 14));
+        gbc.gridy = 2; 
+        add(hintLabel, gbc);
+
+        // Submit action listener
         submit.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -78,13 +122,5 @@ public class LoginPanel extends JPanel {
                 }
             }
         });
-
-        // Add components
-        add(prompt);
-        add(hintLabel);
-        add(inputField);
-        add(submit);
-        add(messageLabel);
-        add(attemptLabel);
     }
 }

@@ -28,10 +28,25 @@ public class Level2 extends JPanel {
 
     private void initialize() {
         setLayout(new BorderLayout());
+        setBackground(Color.decode("#F0F8FF")); // Light blue background
 
         yesButton = new JButton("Yes");
         noButton = new JButton("No");
         
+        yesButton.setFont(new Font("Sans Serif", Font.BOLD, 18));
+        yesButton.setBackground(Color.decode("#FF6F61")); // Coral background
+        yesButton.setForeground(Color.WHITE);
+        yesButton.setFocusPainted(false);
+        yesButton.setOpaque(true);
+        yesButton.setBorder(BorderFactory.createLineBorder(Color.decode("#FF4F3D"), 2));
+
+        noButton.setFont(new Font("Sans Serif", Font.BOLD, 18));
+        noButton.setBackground(Color.decode("#FF6F61")); // Coral background
+        noButton.setForeground(Color.WHITE);
+        noButton.setFocusPainted(false);
+        noButton.setOpaque(true);
+        noButton.setBorder(BorderFactory.createLineBorder(Color.decode("#FF4F3D"), 2));
+
         yesButton.addActionListener(e -> handleAnswer(true));
         noButton.addActionListener(e -> handleAnswer(false));
 
@@ -39,7 +54,11 @@ public class Level2 extends JPanel {
         JPanel questionPanel = new JPanel(new BorderLayout());
         JPanel buttonPanel = new JPanel(new GridLayout(1, 2));
 
+        questionLabel.setFont(new Font("Sans Serif", Font.BOLD, 20));
+        questionLabel.setForeground(Color.decode("#FF6F61")); // Coral text
+        questionLabel.setHorizontalAlignment(SwingConstants.CENTER);
         questionPanel.add(questionLabel, BorderLayout.CENTER);
+        
         buttonPanel.add(yesButton);
         buttonPanel.add(noButton);
 

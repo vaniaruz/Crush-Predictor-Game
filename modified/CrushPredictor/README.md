@@ -73,32 +73,52 @@
 ## Screenshots
 
 "Enter the Secret Code"
+
 ![Screenshot (401)](https://github.com/user-attachments/assets/36d2e567-5386-44ab-80f0-9253d1d1eabc)
+
 "Timeouts"
+
 ![Screenshot (411)](https://github.com/user-attachments/assets/5a8d4d13-0ccb-4fc7-8f80-51cf7f8dcf87)
+
 ![Screenshot (412)](https://github.com/user-attachments/assets/4e18f0c2-5486-42eb-b776-f3af763d47f1)
 
 
+
 "Start"
+
 ![Screenshot (402)](https://github.com/user-attachments/assets/634266e0-57fb-4e6c-91dc-dc23c04d2ab0)
+
 LEVEL 1
+
 "Enter your name and crush's name"
+
 ![Screenshot (403)](https://github.com/user-attachments/assets/f501aa8a-e73c-4c56-a224-365ebc2b31d7)
+
 "Please input both names"
+
 ![Screenshot (413)](https://github.com/user-attachments/assets/f0301612-0e9c-484e-a3c5-9b5a0257404c)
 
 
 LEVEL 2 - Questions
 
 q1 
+
 ![Screenshot (404)](https://github.com/user-attachments/assets/338addc5-84dc-46f9-8e3d-5218676260d8)
+
 q2
+
 ![Screenshot (405)](https://github.com/user-attachments/assets/d4f92e92-9f60-4e45-a8af-fe9da51c9974)
+
 q3
+
 ![Screenshot (406)](https://github.com/user-attachments/assets/40282dc7-ca0d-4856-bcf6-363f9f08990f)
+
 q4
+
 ![Screenshot (407)](https://github.com/user-attachments/assets/1c8267ff-3eef-43e0-9977-25fa0da43da8)
+
 q5
+
 ![Screenshot (408)](https://github.com/user-attachments/assets/74cb350b-47cc-492a-a774-5bd3fb70fc36)
 
 LEVEL 3 - Generator
